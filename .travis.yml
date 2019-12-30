@@ -7,10 +7,7 @@ dist: bionic
 script:
   - hostname
   - cd test_build_pcb_snapshot
-  - docker run --rm -it \
-    -v $PWD/test_proj1:/kicad-project \
-    logickee/kicad-automation-scripts \
-    python3 -m kicadAutomation.eeschema.schematic run_erc /kicad-project/test.sch /kicad-project/ERC_output
+  - docker run --rm -it -v $PWD/test_proj1:/kicad-project logickee/kicad-automation-scripts python3 -m kicadAutomation.eeschema.schematic run_erc /kicad-project/test.sch /kicad-project/ERC_output
   - exit 1
 
 after_success:
