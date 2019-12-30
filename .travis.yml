@@ -7,7 +7,9 @@ dist: bionic
 script:
   - hostname
   - cd test_build_pcb_snapshot
-  - docker run --rm -t -v $PWD/test_proj1:/kicad-project logickee/kicad-automation-scripts python3 -m kicadAutomation.eeschema.schematic run_erc /kicad-project/test.sch /kicad-project/ERC_output
+  - bash scripts/get_erc.sh
+  - cp -R test_proj1/ERC_output $TRAVIS_BUILD_DIR/docs
+  - ls -l $TRAVIS_BUILD_DIR/docs
 
 after_success:
   - cd $TRAVIS_BUILD_DIR
@@ -19,6 +21,7 @@ after_success:
   - pwd
   - pipenv sync
   - pipenv run python3 ./merge.py
+  - pipenv run python3 ./regen_doc.py
 
 notifications:
   slack:
