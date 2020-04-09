@@ -20,6 +20,9 @@ jobs:
       script:
         - wget -O- https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/.travis/merge_if_success.sh | bash - | tee /tmp/merger.log
 
+after_failure:
+  - cat /tmp/merger.log
+
 notifications:
   slack:
     secure: "aMTuiGW5zr8WmLQ5e8+i1FUkQsRbBijERriQfvJq6AqVDXQ3bu+N84DBTsxWQodciWkh/3U9ynNh8qcsGE7EJrf6Rk1+SRKDV58rNi5lqxZ8Z4AJ3+TVBlAVeA8mBgr3r0EK8rd9N/bPZ9gE5dnVzxdOiLsvgBbEvtBZYEwPbGCqfft1vfY10Ny0gv275InkKiXOYQ1oS//E9co9kXziySU51HHwZh64EWmkTquEgXTX/WR/wVlHY9QR0vtjd8ZtEXAe+hq88R/pgwwt9Bw0updmmzIZnr90auJW7b5p4q6PgIQN7/YEwqXaCns7BGw1yhPftoicmOTJFfSi85QkhvfThInGSdVjL0oQC4n4bILPjxahUkt9Dgyi92MDLEmrZYJD/2/7V1ojeiTQQHi0hJ/yu3JtmbfXZQwAExs62ttQxyPJBVc9IF9fWql2YKZZKwoiSOv6SHFKDRWDAk+xJ0FlpgKQKkZAP1oOH/30Vgs1g9QMmy0w5w3Du2WG/gXCR3qOPzAXIPhJZOOti5IA8P+n4Xr6Naum3mkDJDygjIhFqo0IYNCY6axBr9DnzeKKCFT6NU+qgItgQz1RIn4yjugzQQ2tz95M+sQ7E1u15+2AbuJysiXA06MYezNHRh+233pYO4uB2p6DtBEGS3qbDH9MGoviYtAzYNOcz+D1NMY="
