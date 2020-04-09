@@ -4,12 +4,16 @@
 #.travis.yml
 dist: bionic
 
-script:
-  - hostname
-  - cd test_build_pcb_snapshot
-  - bash scripts/get_erc.sh
-  - cp -R test_proj1/ERC_output $TRAVIS_BUILD_DIR/docs
-  - ls -l $TRAVIS_BUILD_DIR/docs
+jobs:
+  include:
+    - stage: Build
+      name: "build project"
+      script:
+        - hostname
+        - cd test_build_pcb_snapshot
+        - bash scripts/get_erc.sh
+        - cp -R test_proj1/ERC_output $TRAVIS_BUILD_DIR/docs
+        - ls -l $TRAVIS_BUILD_DIR/docs
 
 after_success:
   - cd $TRAVIS_BUILD_DIR
