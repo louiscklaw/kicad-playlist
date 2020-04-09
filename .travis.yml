@@ -15,6 +15,11 @@ jobs:
         - cp -R test_proj1/ERC_output $TRAVIS_BUILD_DIR/docs
         - ls -l $TRAVIS_BUILD_DIR/docs
 
+    - stage: Merge
+      name: "Merge to main playlist"
+      script:
+        - echo "dummy job for merging"
+
 after_success:
   - cd $TRAVIS_BUILD_DIR
   - id
