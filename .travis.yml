@@ -17,10 +17,13 @@ cache:
   - pip
 
 script:
-  - hostname | tee /tmp/build.log
+  - bash ./build.sh
 
 after_success:
-  - wget -O- https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/.travis/merge_if_success.sh | bash - | tee /tmp/merge.log
+  - cd .travis
+  - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/.travis/merge_if_success.sh
+  - bash merge_if_success.sh | tee /tmp/merge.log
+  - cd -
 
 after_failure:
   - cat /tmp/build.log

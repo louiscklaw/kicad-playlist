@@ -1,13 +1,36 @@
-FROM akshmakov/kicad-docker:v5-builder
+FROM ubuntu:16.04
+
+LABEL maintainer louiscklaw@gmail.com
+
+# RUN apt-get update && apt-get upgrade -y &&\
+#     apt-get install -y software-properties-common &&\
+#     add-apt-repository --yes ppa:js-reynaud/kicad-5 &&\
+#     apt-get update &&\
+#     apt-get install -y xserver-xorg-video-dummy kicad gerbv make &&\
+#     rm -rf /var/lib/apt/list/*
 
 RUN apt-get update &&\
-    apt-get install -y \
+    apt-get install -y software-properties-common &&\
+    add-apt-repository --yes ppa:js-reynaud/kicad-5 &&\
+    apt-get update &&\
+    apt-get install -y xserver-xorg-video-dummy kicad gerbv make
+
+# VOLUME /workdir
+# WORKDIR /workdir
+
+#ENTRYPOINT ["/scripts/plot_board.py"]
+
+RUN apt-get install -y \
 			transfig \
 			libgtk-3-0 \
 			libcairo2 \
 			libgit2-24 \
 			imagemagick \
 			git
+
+COPY scripts /scripts
+
+RUN rm -rf /var/lib/apt/list/*
 
 COPY --from=akshmakov/eeshow:v5 /usr/local/bin /usr/local/bin
 
