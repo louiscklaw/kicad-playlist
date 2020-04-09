@@ -4,6 +4,9 @@
 #.travis.yml
 dist: bionic
 
+import:
+  - pcbops-tryout/.travis.yml
+
 jobs:
   include:
     - stage: Build
