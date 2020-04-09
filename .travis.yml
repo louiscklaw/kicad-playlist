@@ -17,7 +17,7 @@ cache:
   - pip
 
 script:
-  - bash ./build.sh
+  - bash pcbops-tryout/build.sh
 
 after_success:
   - cd .travis
