@@ -1,45 +1,39 @@
-# https://docs.travis-ci.com/user/docker/
 # https://docs.travis-ci.com/user/environment-variables/
-# https://docs.travis-ci.com/user/job-lifecycle/
+# https://docs.travis-ci.com/user/docker/
 
-# You can import up to 25 other configs in total.
-
-version: ~> 1.0
-
-os: linux
+#.travis.yml
 dist: bionic
 
-language: node_js
-node_js:
-  - 12
-cache:
-  - npm
-  - pip
+import:
+  - pcbops-tryout/.travis.yml
 
-script:
-  - hostname | /tmp/build.log
+jobs:
+  include:
+    - stage: Build
+      name: "build project"
+      script:
+        - hostname
+        - cd test_build_pcb_snapshot
+        - bash scripts/get_erc.sh
+        - cp -R test_proj1/ERC_output $TRAVIS_BUILD_DIR/docs
+        - ls -l $TRAVIS_BUILD_DIR/docs
 
-after_success:
-  - wget -O- https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/.travis/merge_if_success.sh | bash - | tee /tmp/merge.log
+    - stage: Merge
+      name: "Merge to main playlist"
+      script:
+        - wget -O- https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/.travis/merge_if_success.sh | bash - | tee /tmp/merger.log
 
 after_failure:
-  - cat /tmp/build.log
-  - cat /tmp/merge.log
+  - cat /tmp/merger.log
 
 notifications:
   slack:
-  secure: "Utt3jL6FPny0NGjOSaGD9/ldUfWKXAiSzpDi/W/fh33N6Y/tNyauvk5uVrLrtCl9PkDwPGLkJEPK7o2lTUx4WmzlBnlPLK8lgNUr+lPLPhsdOcm0TC4RpI2+fp5d3T5eDO/hOZLuLTrG7uk3WtXIDJBMWef0EVqW9ciAG4EZ3x5lzyZ7S/0sSn01MkjzBOao8JKJ+TEXSl3+ARLVhWmDaEhbL39PYeLG4yJkRHyfJfgBQTcWYoThO9fcHGvxFrffuyJQaEnCp4EC5sewvf8Bsaw8xFn326jqnfljdaqAldN4mOyRYInDXrn9h39h2KgH0TVQmeBSvMbI8BO/b/TqIGM0t1qz0FOFACCHOfp+qKbZ8Eg9wDh7ZPD55U0+vAqwwrWBahvpLJS8+XUu3lRkLIweOeMz+Ku+DMJanZ9VsEHLDhHx+aA0XYYJhn54/tJswwRMHgdR8rMPDaIU6nbh/AnHzOiMRYy7km+YPI7ZaUqwyNWJL85npZsAfqPAN5OKHnIJ23XpGfXPpsOroS+2YjEUPzuEXo1W5lLw+WnkNtEmSISViksG0G//GoZ4rABYX4GoZP81jG/yFBceymmEEsdLV7YN4pgsGJH5ERatQZnsSlrG1/5KMpS1p4vYUgJBd+TZU1TrODd8J67LQaZVHRpp1wYgi9nu85gRJy/XdDc="
+    secure: "aMTuiGW5zr8WmLQ5e8+i1FUkQsRbBijERriQfvJq6AqVDXQ3bu+N84DBTsxWQodciWkh/3U9ynNh8qcsGE7EJrf6Rk1+SRKDV58rNi5lqxZ8Z4AJ3+TVBlAVeA8mBgr3r0EK8rd9N/bPZ9gE5dnVzxdOiLsvgBbEvtBZYEwPbGCqfft1vfY10Ny0gv275InkKiXOYQ1oS//E9co9kXziySU51HHwZh64EWmkTquEgXTX/WR/wVlHY9QR0vtjd8ZtEXAe+hq88R/pgwwt9Bw0updmmzIZnr90auJW7b5p4q6PgIQN7/YEwqXaCns7BGw1yhPftoicmOTJFfSi85QkhvfThInGSdVjL0oQC4n4bILPjxahUkt9Dgyi92MDLEmrZYJD/2/7V1ojeiTQQHi0hJ/yu3JtmbfXZQwAExs62ttQxyPJBVc9IF9fWql2YKZZKwoiSOv6SHFKDRWDAk+xJ0FlpgKQKkZAP1oOH/30Vgs1g9QMmy0w5w3Du2WG/gXCR3qOPzAXIPhJZOOti5IA8P+n4Xr6Naum3mkDJDygjIhFqo0IYNCY6axBr9DnzeKKCFT6NU+qgItgQz1RIn4yjugzQQ2tz95M+sQ7E1u15+2AbuJysiXA06MYezNHRh+233pYO4uB2p6DtBEGS3qbDH9MGoviYtAzYNOcz+D1NMY="
 
 env:
   global:
-  # SLACK_TOKEN
-  secure: "eXYUaB0KghhizgKeOqUOdxluOQoWnaFv5uWDLBErcYIveujCjpPVjR37h1nRg8x2griwkVSgZCZfJY4PnE0/DXVAz5GzxGVoFkuPhHAO554ihbdfvLUdQTfYDjWRyv92JJIZoV1b4VD+0hxDlWIIooAUzrPsBsvatmOOOquq1TCYWnb3JlmbOGZUAkUKuj6m7oVdFuWA7f1ms+LkvSY/s8ECrqalvUEu6WQPPRX/NENX9I6TcY4XSpkjG/ACVa3Q8HEWfbzLmOPqOEAgWCaVjK5spZ6btbHA8nmTpEljrm3pecMoHpkHeMUP74cJK9VG5x33jS8JsIr5rneT3N8x5IV79BhvSX1DWqS2AJ26TKQ1gYz2wkQJKY04aWAZYk9eU/DsK1SUcslkxG7A6gvHOyd2C/1vzQuTYjq6/Cv9KpzJtQKxIgBAnzFtwqgWMxRNhOkawRSgj2VBrq5igInRclOzn59JK8bmsAVQhi+U94bUbCV7qMMOEEMliO1MmnJVFWvl5JqtKA5WXzGHJlLqkRWrwOWZ/hfvNe4RpTzs9YZayMRioJYOElsW0QwskpuK4Cd2pNFBHc/Apz0JOAazxt3brFh206mAyG/+IhYGxZk6McBBayk/8lM6w3aXi6jC2SKU6XMuBJkheOvChb2qFJ7STQtLPEvk0K2nENfaf1k="
+    # SLACK_TOKEN
+    - secure: "fCANmEws8+etDQNrrqyKWscIl7B3EZQczfzHgYYunRO6+S9OjFCdIa/HcipXPg0dhdOvOCTi0iJQxntOQd2g/LSOapI+7WK4ewy32w/rL0Gn921YSCHNE8clR1+Q8SvRLzCmVeOYI2oztJH6MKSQp9/KrNYrwyaytEpjOYzDGyfOZkLBrbUOX0eO+XgLk5I8QPwPyTrmZn5mgeRr1EekQN1LqkLJz+dC1RszQ9ldYH9eHvXZhG1LHEt0SqcHkV6NQne25PZt32R6RotUxhiM71BvvvXuSm9MfCp963huoqOT36AF1u23VPEYTsow94mHUBC8B97i4WYT/ss+i0a2RTVp33Dt+FerabHCcpDh1YIqG0mv9VMQC6eUKLhhKom5iN4iaZ7YPdTpr9Xe6ueNUwj/29FeyVSHL0FDVZaPtoR8IZqvur4pBUXscTfTk6yTCP6VwZE80wDnmZ7lQ991LmDUVnDNTRxUXeylbhaiygTsCWzy82qEQE0vtk01bMuHu1sPqWYEHmraDh2jRhu45hpZ9jDnkupe43uiGZnpXDjmVwlgXLCqQcPkqcqTHsE2ctCDKfP8/fZCD3QYdV4bEkwYCWyC1KKFehSXr07i+BLaWLk7Cb6ZJaShuGMK17jeFQ/AauhIH2JDutMQltARqQsWXlyPyph0dx06QlBmxJA="
 
-  # GITHUB_TOKEN
-  secure: "OQDWjdn8DvM/HlDjhYUIvyJ/29NV/M7nxcs4j/B0LRYwVXfXezLyryAamxymmsOq/8ZtPY/JnXq5EQJLo8VSnMflyzijlJruRSZdT2R0+0dlnaWk+l7ZCAmYIkKqWg13C4pka1QTHdeOHrzeTj3vWxBw2bqe5qcrgaWFpLR7rV0iGV8W8pCVe20Mr7HFhO+D4L0cI4cp2s1vOvMfn26ttZBrL7h9kTvNYIsPM2jjSOkTDemehXBQDrHjyOW2Vjb5XPAJT7/dj5Ddykfqpm4H7j708VpIYjMkxh6LmHr+5152faK8mPBjjQ1DQaTd+EKvXoA3ESjbVi8hoQJdx2Ttf7Twa6H9E4yVQJSm1CBf1g571k9wV8LoNQ3rD64bOyUN1+kCPBO9cNn4+ihlKMtszVC5z5ULGdZJVSbrCbRP7Wp5qxuAV/4Y7PZigZYGEJB8oZOL5sxGvfdxl2+QFpNAsiudj2DOouQV8TpE5MqMGM6AwcFwQhyOSzKjMjbHBbhZvLH6XbQKpnFIIDcG/NCh3/TQuLHKRHPZgZu0Kla27Jnkxxa5CcLKGxCHuKSCWDuC+zk7iaUA2O+2sd5sO8nsO2TTKcimYAdu406BHPzq2nTmHFpFUmTdL82JVgXXBhZUTtoNlnuzn5AMSET4O97zrCcsh4YRytdHAtLgXhQEGCU="
-
-  # TRAVIS_COMMIT_TOKEN
-  secure: "nG05SZQV39f7Vse8zwYT4tGpS4YwPW0rUTswzDWe36J0oUnSfdxXCmjwINgBLCRMbqSM/+gnYnRIIqzJejfkJ4HpORZ/Vh8GcY02TQI78lccBybwImlDtS88aCD8GfonnBvuuKmyD7nx8EQh2ufrO/9w3veh2pkInRqhlxN/V2NbXJc/FqfJJ/eCSrwwON53GOmMnzVD2Rd8BkRNI4fp5+xAzy8oiSGor/KSKQJGJEiVZH6TkdsJ5JwEPE0q5+QLp7NgUSri1S8NmHIw4d2fFNMg2fCWxmf2gHhnIGTo7Dv5UrkN45g7apU/JK2XDwpWId/E3M+WfdSBU+2ftZsp0AFT4IGbqmGKbfqJXnZkP5siUUWUYzCw/ZwCIM95vQjC5m+/niaedpo4DDwRnuTdfNeANyQk9Xg0lF8D1QssQMDxeCWWLc2ZMPGCHFPKT3ePvt3763aWsQweZb8gW13MwICBT71yTMoVlCuAxDiGQ04k7NZuxnKvxQoy43kZo/HZQF38sRBuU5f2JXf0BXudNFDWY5Ck4Ro+NMECM85ziP/ZSPWoOXT5T9mHC+rlF0SZdm5+7TJHQ80fJ3v+sUvqFcLdfO99sXcwUw2zR3K3gLzf0J2MZ/rY81vyDFTHg0lETjZi6Qk38EFz9sFuzx0akwIXb0qFSJX4Aw2jvXz36/0="
-
-  # DOCKER_PASSWORD
-  secure: "Y/9J6UvGZvZNYWgeyxZ0OZtZGaEZTolfyxdhLBx+Kkh+eoPTVSjqsEkuutkn2Fqf47fdSLljdGxorcVHJzluAix8XIg/4cyU4NEqWPijCrPEpIETKosZihhZBlO3sQrIVTL1XwrV2UlEnY815TKdlrLpicAvgmpaq5MoFr0wFO8x3O7ryq4eIEkQeh7WzJ8nmKBF3h3MhT8484+mqKC1pL+PXA53Vd7gUrQ4TOuUh9QR4nCF9AUYTc9P0WMJtxdwX96KIE5PbGX6Ye3fCS5039HXA2nvJB3ZW5/BF6tX/pdTL/P9AY2dcWdoQs+azq3ydb/Hnd2YNn2nrRZUoeps2azSBG9bEE9HPvc1eANHz6oOFux9Kbq7NiA3jBIKMOM74QyV7TFgeoDSoyRKTXb0lto0OCJqs2T0vsqdq+J6CAEa94/OHE5zyHKm1uhMqpMuZtHz5/DF/yTj95X8raMquA1ZIC2WhIxigV1/9h4+2t6bwXcEL9gkAtd9W3ro4QXjcdWO3oMrNyuPYWB56nUtff89iG0YBidQIVjKkM1MU03AVDFavAZ2hFny+X3AVkWdKcHVUmTZUYiTads0llzi6AMs0R9mmMh5Q+V/qVscF7RWUYiWEYwoI0ifAnoI863PNBxYl+EqFFpGSn/1DnUX9Ne1yGEWUaEzVHFYP39Fbmo="
+    # GITHUB_TOKEN
+    - secure: "JZP0pHXbzmEJ9vMVBsZr+waihY9jJ1TRrexGg/g8prfRnidal2F6Go4FBzb03Vi8EYroE62ju/9scgxz2N+z3tGItqPihGxlAp/qz2NhZF2Hw9oPJFOs9GdhoSE0NpegrYmUkZZpVq4aoF6JhHXIcVwDnO5tOB49x1QVkK635IDwMwrrhM6keZCFPExpkIEhKj24gQRZ7sIiS4u1bwIqzkUL/qtLwMcQ8iuRQuFXKdVBuXyxCK3j8HbQ6n8ujEWhQWJzyVaWUPLx3ftQvfCu7FyRSb3MoWZ5jfArpw1pbneQ+xc+EjoocxhRFNgL3asbEA0A4She9jKnOj8bNWBJPW4OU5eIHt9q2TLsmCzndMfKWs+WDc+i959vOWmlehdMqqNndrd6/+iCwD0nV2vHed4K5NmJfsYL5T7LGHSx71e9QIvGPad+tVVr9J9mQKTESYkQk0PTDmgEZVjsm28jUx9TSAtrsJHYUmRqWId2zvrqD+D5tt10zr6S+av9BGwJqwz5rfJFWFA2Zcw9F50RTK6g9rsMBNqQTvNnXhgQT8In2IprriRt6ZuV8ipRoByS5omPyYGo6Oq2+xoc7HVPZUkonWz1wu0/0q0/007lpqvgBM4+wVAVfDuSh/jAo1l48eXY5uHiWJWBFho9/RWAHWQH0sfcBIPhWU5Iv9WIPvA="
