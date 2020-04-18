@@ -25,8 +25,8 @@ jobs:
         - chmod +x merge_if_success.sh
         - bash merge_if_success.sh
 
-after_failure:
-  - cat /tmp/merger.log
+# after_failure:
+#   - cat /tmp/merger.log
 
 notifications:
   slack:
