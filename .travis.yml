@@ -1,39 +1,22 @@
-# https://docs.travis-ci.com/user/environment-variables/
 # https://docs.travis-ci.com/user/docker/
+# https://docs.travis-ci.com/user/environment-variables/
+# https://docs.travis-ci.com/user/job-lifecycle/
 
-#.travis.yml
-dist: bionic
+# You can import up to 25 other configs in total.
+os: linux
+
+language: node_js
+
+node_js:
+  - 12
+
+cache:
+  - npm
+  - pip
 
 import:
-  - pcbops-tryout/.travis.yml
+  - credentials.yml
 
-jobs:
-  include:
-    - stage: Build
-      name: "build project"
-      script:
-        - hostname
-        - cd test_build_pcb_snapshot
-        - bash scripts/get_erc.sh
-        - cp -R test_proj1/ERC_output $TRAVIS_BUILD_DIR/docs
-        - ls -l $TRAVIS_BUILD_DIR/docs
-
-    - stage: Merge
-      name: "Merge to main playlist"
-      script:
-        - wget -O- https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/.travis/merge_if_success.sh | bash - | tee /tmp/merger.log
-
-after_failure:
-  - cat /tmp/merger.log
-
-notifications:
-  slack:
-    secure: "aMTuiGW5zr8WmLQ5e8+i1FUkQsRbBijERriQfvJq6AqVDXQ3bu+N84DBTsxWQodciWkh/3U9ynNh8qcsGE7EJrf6Rk1+SRKDV58rNi5lqxZ8Z4AJ3+TVBlAVeA8mBgr3r0EK8rd9N/bPZ9gE5dnVzxdOiLsvgBbEvtBZYEwPbGCqfft1vfY10Ny0gv275InkKiXOYQ1oS//E9co9kXziySU51HHwZh64EWmkTquEgXTX/WR/wVlHY9QR0vtjd8ZtEXAe+hq88R/pgwwt9Bw0updmmzIZnr90auJW7b5p4q6PgIQN7/YEwqXaCns7BGw1yhPftoicmOTJFfSi85QkhvfThInGSdVjL0oQC4n4bILPjxahUkt9Dgyi92MDLEmrZYJD/2/7V1ojeiTQQHi0hJ/yu3JtmbfXZQwAExs62ttQxyPJBVc9IF9fWql2YKZZKwoiSOv6SHFKDRWDAk+xJ0FlpgKQKkZAP1oOH/30Vgs1g9QMmy0w5w3Du2WG/gXCR3qOPzAXIPhJZOOti5IA8P+n4Xr6Naum3mkDJDygjIhFqo0IYNCY6axBr9DnzeKKCFT6NU+qgItgQz1RIn4yjugzQQ2tz95M+sQ7E1u15+2AbuJysiXA06MYezNHRh+233pYO4uB2p6DtBEGS3qbDH9MGoviYtAzYNOcz+D1NMY="
-
-env:
-  global:
-    # SLACK_TOKEN
-    - secure: "fCANmEws8+etDQNrrqyKWscIl7B3EZQczfzHgYYunRO6+S9OjFCdIa/HcipXPg0dhdOvOCTi0iJQxntOQd2g/LSOapI+7WK4ewy32w/rL0Gn921YSCHNE8clR1+Q8SvRLzCmVeOYI2oztJH6MKSQp9/KrNYrwyaytEpjOYzDGyfOZkLBrbUOX0eO+XgLk5I8QPwPyTrmZn5mgeRr1EekQN1LqkLJz+dC1RszQ9ldYH9eHvXZhG1LHEt0SqcHkV6NQne25PZt32R6RotUxhiM71BvvvXuSm9MfCp963huoqOT36AF1u23VPEYTsow94mHUBC8B97i4WYT/ss+i0a2RTVp33Dt+FerabHCcpDh1YIqG0mv9VMQC6eUKLhhKom5iN4iaZ7YPdTpr9Xe6ueNUwj/29FeyVSHL0FDVZaPtoR8IZqvur4pBUXscTfTk6yTCP6VwZE80wDnmZ7lQ991LmDUVnDNTRxUXeylbhaiygTsCWzy82qEQE0vtk01bMuHu1sPqWYEHmraDh2jRhu45hpZ9jDnkupe43uiGZnpXDjmVwlgXLCqQcPkqcqTHsE2ctCDKfP8/fZCD3QYdV4bEkwYCWyC1KKFehSXr07i+BLaWLk7Cb6ZJaShuGMK17jeFQ/AauhIH2JDutMQltARqQsWXlyPyph0dx06QlBmxJA="
-
-    # GITHUB_TOKEN
-    - secure: "JZP0pHXbzmEJ9vMVBsZr+waihY9jJ1TRrexGg/g8prfRnidal2F6Go4FBzb03Vi8EYroE62ju/9scgxz2N+z3tGItqPihGxlAp/qz2NhZF2Hw9oPJFOs9GdhoSE0NpegrYmUkZZpVq4aoF6JhHXIcVwDnO5tOB49x1QVkK635IDwMwrrhM6keZCFPExpkIEhKj24gQRZ7sIiS4u1bwIqzkUL/qtLwMcQ8iuRQuFXKdVBuXyxCK3j8HbQ6n8ujEWhQWJzyVaWUPLx3ftQvfCu7FyRSb3MoWZ5jfArpw1pbneQ+xc+EjoocxhRFNgL3asbEA0A4She9jKnOj8bNWBJPW4OU5eIHt9q2TLsmCzndMfKWs+WDc+i959vOWmlehdMqqNndrd6/+iCwD0nV2vHed4K5NmJfsYL5T7LGHSx71e9QIvGPad+tVVr9J9mQKTESYkQk0PTDmgEZVjsm28jUx9TSAtrsJHYUmRqWId2zvrqD+D5tt10zr6S+av9BGwJqwz5rfJFWFA2Zcw9F50RTK6g9rsMBNqQTvNnXhgQT8In2IprriRt6ZuV8ipRoByS5omPyYGo6Oq2+xoc7HVPZUkonWz1wu0/0q0/007lpqvgBM4+wVAVfDuSh/jAo1l48eXY5uHiWJWBFho9/RWAHWQH0sfcBIPhWU5Iv9WIPvA="
+script:
+  - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-build-merger/merge_if_success.sh
+  - bash merge_if_success.sh | tee merge.log
