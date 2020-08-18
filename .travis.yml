@@ -24,7 +24,7 @@ import:
   - .travis-merger.yml
   - .travis-stages.yml
   - build-docker/.travis.yml
-  - pcbops-tryout/.travis.yml
+  - pcbops-helloworld/.travis.yml
   - arduino-grove-beginner-kit/.travis.yml
 
 after_failure:
