@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr User 5846 4134
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -13,6 +13,10 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 700  900  0    50   ~ 0
-helloworld
+$Sheet
+S 600  650  800  600 
+U 5F3C13C2
+F0 "simple-button" 50
+F1 "simple-button.sch" 50
+$EndSheet
 $EndSCHEMATC
