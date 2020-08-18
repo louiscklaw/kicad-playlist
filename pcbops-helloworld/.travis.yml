@@ -8,7 +8,6 @@ jobs:
       name: Test pcbops-helloworld
       script:
         - cd pcbops-helloworld
-        -   docker build . -t logickee/pcb-cicd
         -   docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_bom   &
         -   docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_drawings   &
         -   docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_drc   &

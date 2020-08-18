@@ -1,5 +1,7 @@
 
 stages:
+  - name: Build_docker
+
   - name: Unit_test
   - name: Test
   - name: Build

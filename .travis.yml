@@ -7,6 +7,7 @@
 version: ~> 1.0
 
 os: linux
+
 dist: bionic
 
 language: node_js
@@ -18,12 +19,14 @@ cache:
   - npm
   - pip
 
-after_failure:
-  - cat /tmp/build.log
-  - cat /tmp/merge.log
-
 import:
   - credentials.yml
   - .travis-merger.yml
   - .travis-stages.yml
+  - build-docker/.travis.yml
   - pcbops-tryout/.travis.yml
+  - arduino-grove-beginner-kit/.travis.yml
+
+after_failure:
+  - cat /tmp/build.log
+  - cat /tmp/merge.log
