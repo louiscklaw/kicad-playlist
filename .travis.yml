@@ -18,9 +18,6 @@ cache:
   - npm
   - pip
 
-# script:
-#   - bash pcbops-tryout/build.sh
-
 after_failure:
   - cat /tmp/build.log
   - cat /tmp/merge.log

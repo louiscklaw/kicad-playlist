@@ -1,4 +1,7 @@
 
+# script:
+#   - bash pcbops-tryout/build.sh
+
 jobs:
   include:
     - stage: Test
