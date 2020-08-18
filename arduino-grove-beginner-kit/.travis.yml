@@ -17,5 +17,5 @@ jobs:
         -   docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_rfq   &
         -   docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_sch   &
         -   docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_step   &
-        -   wait
+        - travis_wait 30 wait
         - cd -
