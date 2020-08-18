@@ -3,7 +3,11 @@
 # https://docs.travis-ci.com/user/job-lifecycle/
 
 # You can import up to 25 other configs in total.
+
+version: ~> 1.0
+
 os: linux
+dist: bionic
 
 language: node_js
 
@@ -14,9 +18,14 @@ cache:
   - npm
   - pip
 
+script:
+  - bash pcbops-tryout/build.sh
+
+after_failure:
+  - cat /tmp/build.log
+  - cat /tmp/merge.log
+
 import:
   - credentials.yml
-
-script:
-  - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-build-merger/merge_if_success.sh
-  - bash merge_if_success.sh | tee merge.log
+  - .travis-merger.yml
+  - .travis-stages.yml
