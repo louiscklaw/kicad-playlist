@@ -7,7 +7,6 @@ jobs:
         -   docker build . -t logickee/pcb-cicd
         - cd -
 
-      after_success:
         - docker login -u logickee -p $DOCKERHUB_PASSWORD
         - docker push logickee/pcb-cicd
         - docker logout
