@@ -18,8 +18,8 @@ cache:
   - npm
   - pip
 
-script:
-  - bash pcbops-tryout/build.sh
+# script:
+#   - bash pcbops-tryout/build.sh
 
 after_failure:
   - cat /tmp/build.log
@@ -29,3 +29,4 @@ import:
   - credentials.yml
   - .travis-merger.yml
   - .travis-stages.yml
+  - pcbops-tryout/.travis.yml
