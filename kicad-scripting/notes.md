@@ -1,0 +1,1 @@
+http://kevincuzner.com/2017/04/28/arranging-components-in-a-circle-with-kicad/
