@@ -8,14 +8,13 @@ jobs:
       name: Test arduino-grove-beginner-kit
       script:
         - cd arduino-grove-beginner-kit
-        -   docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_bom   &
-        -   docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_drawings   &
-        -   docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_drc   &
-        -   docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_erc   &
-        -   docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_plot   &
-        -   docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_pnp   &
-        -   docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_rfq   &
-        -   docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_sch   &
-        -   docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_step   &
-        - travis_wait 30 wait
+        - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_bom
+        - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_drawings
+        - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_drc
+        - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_erc
+        - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_plot
+        - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_pnp
+        - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_rfq
+        - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_sch
+        - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_step
         - cd -
