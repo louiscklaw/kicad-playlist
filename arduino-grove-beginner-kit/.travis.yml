@@ -1,6 +1,6 @@
 
 # script:
-#   - bash arduino-grove-beginner-kit/build.sh
+#   - bash pcbops-helloworld/build.sh
 
 jobs:
   include:
