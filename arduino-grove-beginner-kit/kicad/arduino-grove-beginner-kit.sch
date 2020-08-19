@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr User 5846 4134
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -18,5 +18,11 @@ S 600  650  800  600
 U 5F3C13C2
 F0 "simple-button" 50
 F1 "simple-button.sch" 50
+$EndSheet
+$Sheet
+S 1700 650  800  600 
+U 5F3D6A2D
+F0 "DHT-11" 50
+F1 "DHT-11.sch" 50
 $EndSheet
 $EndSCHEMATC

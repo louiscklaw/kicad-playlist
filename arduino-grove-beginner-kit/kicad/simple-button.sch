@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr User 5846 4134
 encoding utf-8
-Sheet 2 2
+Sheet 2 3
 Title ""
 Date ""
 Rev ""
@@ -17,6 +17,8 @@ $Comp
 L Connector_Generic:Conn_01x04 J?
 U 1 1 5F3C1A74
 P 1850 1050
+AR Path="/5F3C13C2/5F3C1A74" Ref="J?"  Part="1" 
+AR Path="/5F3D6A2D/5F3C1A74" Ref="J?"  Part="1" 
 F 0 "J?" H 1768 625 50  0000 C CNN
 F 1 "Conn_01x04" H 1768 716 50  0000 C CNN
 F 2 "" H 1850 1050 50  0001 C CNN
@@ -28,6 +30,8 @@ $Comp
 L taobao-button:SW_RESET,2_leg,SMD SW?
 U 1 1 5F3C265E
 P 2850 1400
+AR Path="/5F3C13C2/5F3C265E" Ref="SW?"  Part="1" 
+AR Path="/5F3D6A2D/5F3C265E" Ref="SW?"  Part="1" 
 F 0 "SW?" V 2804 1548 50  0000 L CNN
 F 1 "SW_RESET,2_leg,SMD" V 2895 1548 50  0000 L CNN
 F 2 "footprint-lib:SW_SPST_CK_RS282G05A3" H 2850 1600 50  0001 C CNN
@@ -39,6 +43,8 @@ $Comp
 L taobao-r:R103,0805 R?
 U 1 1 5F3C302D
 P 3550 1100
+AR Path="/5F3C13C2/5F3C302D" Ref="R?"  Part="1" 
+AR Path="/5F3D6A2D/5F3C302D" Ref="R?"  Part="1" 
 F 0 "R?" H 3609 1146 50  0000 L CNN
 F 1 "R103,0805" H 3609 1055 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3550 1100 50  0001 C CNN
