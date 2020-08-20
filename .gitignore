@@ -2,4 +2,4 @@
 **/*.ogv
 **/*.sch-bak
 **/fp-info-cache
-
+**/*-bak
