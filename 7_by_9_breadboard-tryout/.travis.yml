@@ -5,9 +5,9 @@
 jobs:
   include:
     - stage: Test
-      name: Test pcbops-helloworld
+      name: Test 7_by_9_breadboard-tryout
       script:
-        - cd pcbops-helloworld
+        - cd 7_by_9_breadboard-tryout
         - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_bom
         - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_drawings
         - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_drc
