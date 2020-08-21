@@ -3,7 +3,7 @@ jobs:
     - stage: Build_docker
       name: build docker image
       script:
-        - cd pcbops-helloworld
+        - cd pcbops-tryout
         -   docker build . -t logickee/pcb-cicd
         - cd -
 
