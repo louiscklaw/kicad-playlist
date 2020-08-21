@@ -11,6 +11,9 @@ EEPLOT=eeplot
 PROJECT=7_by_9_breadboard-tryout
 
 PLOT_SCRIPT=kicad_cicd/plotter.py
+PLOT_GERBER_SCRIPT=kicad_cicd/plotter_gerber.py
+PLOT_PDF_SCRIPT=kicad_cicd/plotter_pdf.py
+PLOT_SVG_SCRIPT=kicad_cicd/plotter_svg.py
 
 OUTPUT_DIR=output
 PROJECT_DIR=kicad
@@ -22,6 +25,14 @@ PROJECT_FILE=$(PROJECT_DIR)/$(PROJECT).pro
 
 all: ci_plot ci_sch
 
+ci_plot_svg:
+	$(PYTHON) $(PLOT_SVG_SCRIPT) $(INPUT_FILE) $(OUTPUT_DIR)/svg
+
+ci_plot_pdf:
+	$(PYTHON) $(PLOT_PDF_SCRIPT) $(INPUT_FILE) $(OUTPUT_DIR)/pdf
+
+ci_plot_gerber:
+	$(PYTHON) $(PLOT_GERBER_SCRIPT) $(INPUT_FILE) $(OUTPUT_DIR)/gerbers_new
 
 ci_plot:
 	$(PYTHON) $(PLOT_SCRIPT) $(INPUT_FILE) $(OUTPUT_DIR)/gerbers
@@ -30,7 +41,7 @@ ci_sch:
 	$(EEPLOT) $(LIB_DIR)/*.lib $(PROJECT_FILE) -o $(OUTPUT_DIR)/$(PROJECT).pdf
 
 ci_drawings:
-	$(ECHO) "NYI"	
+	$(ECHO) "NYI"
 
 ci_step:
 	$(ECHO) "NYI"
@@ -66,4 +77,3 @@ Eeplot cmd  : $(EEPLOT)
 Project     : $(PROJECT)
 
 .PHONY: ci_plot ci_sch all ECHO
-
