@@ -9,3 +9,6 @@ https://travis-ci.com/louiscklaw/kicad-playlist
 
 - develop
 [![Build Status](https://travis-ci.com/louiscklaw/kicad-playlist.svg?branch=develop)](https://travis-ci.com/louiscklaw/kicad-playlist)
+
+### repo:
+https://github.com/louiscklaw/kicad-playlist
