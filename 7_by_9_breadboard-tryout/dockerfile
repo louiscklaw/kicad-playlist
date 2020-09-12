@@ -2,6 +2,10 @@ FROM ubuntu:16.04
 
 LABEL maintainer louiscklaw@gmail.com
 
+RUN sed -i 's/http:\/\/archive\.ubuntu\.com/http:\/\/ftp\.cuhk\.edu\.hk\/pub\/Linux/g' /etc/apt/sources.list && \
+  sed -i 's/http:\/\/security\.ubuntu\.com/http:\/\/ftp\.cuhk\.edu\.hk\/pub\/Linux/g' /etc/apt/sources.list
+
+
 # RUN apt-get update && apt-get upgrade -y &&\
 #     apt-get install -y software-properties-common &&\
 #     add-apt-repository --yes ppa:js-reynaud/kicad-5 &&\

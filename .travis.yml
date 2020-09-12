@@ -17,7 +17,6 @@ node_js:
 
 cache:
   - npm
-  - pip
 
 import:
   - credentials.yml

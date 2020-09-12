@@ -6,6 +6,11 @@ jobs:
   include:
     - stage: Test
       name: Test arduino-grove-beginner-kit
+      install:
+        - cd pcbops-helloworld
+        -   travis_wait 30  docker build . -t logickee/pcb-cicd
+        - cd ..
+
       script:
         - cd arduino-grove-beginner-kit
         - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_bom
@@ -15,6 +20,6 @@ jobs:
         - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_plot
         - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_pnp
         - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_rfq
-        - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_sch
+        # - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_sch
         - travis_wait 30  docker run -t -v $PWD:/workspace  logickee/pcb-cicd make ci_step
         - cd -

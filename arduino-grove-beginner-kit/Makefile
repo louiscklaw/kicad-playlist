@@ -8,7 +8,7 @@
 PYTHON=python
 ECHO=echo
 EEPLOT=eeplot
-PROJECT=example
+PROJECT=arduino-grove-beginner-kit
 
 PLOT_SCRIPT=kicad_cicd/plotter.py
 
@@ -30,7 +30,7 @@ ci_sch:
 	$(EEPLOT) $(LIB_DIR)/*.lib $(PROJECT_FILE) -o $(OUTPUT_DIR)/$(PROJECT).pdf
 
 ci_drawings:
-	$(ECHO) "NYI"	
+	$(ECHO) "NYI"
 
 ci_step:
 	$(ECHO) "NYI"
@@ -66,4 +66,3 @@ Eeplot cmd  : $(EEPLOT)
 Project     : $(PROJECT)
 
 .PHONY: ci_plot ci_sch all ECHO
-
