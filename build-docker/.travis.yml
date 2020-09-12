@@ -1,0 +1,12 @@
+jobs:
+  include:
+    - stage: Build_docker
+      name: build docker image
+      script:
+        - cd pcbops-helloworld
+        -   docker build . -t logickee/pcb-cicd
+        - cd -
+
+        - docker login -u logickee -p $DOCKERHUB_PASSWORD
+        - docker push logickee/pcb-cicd
+        - docker logout
