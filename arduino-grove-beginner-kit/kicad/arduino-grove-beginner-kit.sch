@@ -26,9 +26,9 @@ F0 "DHT-11" 50
 F1 "DHT-11.sch" 50
 $EndSheet
 $Sheet
-S 2750 650  800  600 
-U 5F3EA444
-F0 "sheet5F3EA444" 50
-F1 "DHT-11.sch" 50
+S 2800 650  800  600 
+U 5F5E65E2
+F0 "buzzer" 50
+F1 "buzzer.sch" 50
 $EndSheet
 $EndSCHEMATC
