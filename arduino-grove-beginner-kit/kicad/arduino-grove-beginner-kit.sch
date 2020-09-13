@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr User 5846 4134
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -24,5 +24,11 @@ S 1700 650  800  600
 U 5F3D6A2D
 F0 "DHT-11" 50
 F1 "DHT-11.sch" 50
+$EndSheet
+$Sheet
+S 2800 650  800  600 
+U 5F5E65E2
+F0 "buzzer" 50
+F1 "buzzer.sch" 50
 $EndSheet
 $EndSCHEMATC
