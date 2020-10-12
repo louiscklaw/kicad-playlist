@@ -1,0 +1,64 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+$CMP VAR_BLUE_101
+D variable resistor
+K R r res resistor VAR_BLUE_101 VAR_BLUE_101
+F ~
+$ENDCMP
+$CMP VAR_BLUE_102
+D variable resistor
+K R r res resistor VAR_BLUE_102 VAR_BLUE_102
+F ~
+$ENDCMP
+$CMP VAR_BLUE_103
+D variable resistor
+K R r res resistor VAR_BLUE_103 VAR_BLUE_103
+F ~
+$ENDCMP
+$CMP VAR_BLUE_104
+D variable resistor
+K R r res resistor VAR_BLUE_104 VAR_BLUE_104
+F ~
+$ENDCMP
+$CMP VAR_BLUE_105
+D variable resistor
+K R r res resistor VAR_BLUE_105 VAR_BLUE_105
+F ~
+$ENDCMP
+$CMP VAR_BLUE_202
+D variable resistor
+K R r res resistor VAR_BLUE_202 VAR_BLUE_202
+F ~
+$ENDCMP
+$CMP VAR_BLUE_203
+D variable resistor
+K R r res resistor VAR_BLUE_203 VAR_BLUE_203
+F ~
+$ENDCMP
+$CMP VAR_BLUE_204
+D variable resistor
+K R r res resistor VAR_BLUE_204 VAR_BLUE_204
+F ~
+$ENDCMP
+$CMP VAR_BLUE_501
+D variable resistor
+K R r res resistor VAR_BLUE_501 VAR_BLUE_501
+F ~
+$ENDCMP
+$CMP VAR_BLUE_502
+D variable resistor
+K R r res resistor VAR_BLUE_502 VAR_BLUE_502
+F ~
+$ENDCMP
+$CMP VAR_BLUE_503
+D variable resistor
+K R r res resistor VAR_BLUE_503 VAR_BLUE_503
+F ~
+$ENDCMP
+$CMP VAR_BLUE_504
+D variable resistor
+K R r res resistor VAR_BLUE_504 VAR_BLUE_504
+F ~
+$ENDCMP
+#
+#End Library

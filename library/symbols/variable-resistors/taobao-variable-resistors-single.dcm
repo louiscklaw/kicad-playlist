@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP VAR_BLUE_101
+D variable resistor
+K R r res resistor VAR_BLUE_101 VAR_BLUE_101
+F ~
+$ENDCMP
+#
+#End Doc Library
