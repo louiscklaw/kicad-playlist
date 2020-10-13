@@ -17,3 +17,7 @@ cd -
 cd symbols/taobao-cp
   ./build.sh
 cd -
+
+cd symbols/taobao-fuse
+  ./build.sh
+cd -
