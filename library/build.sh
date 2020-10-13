@@ -21,3 +21,11 @@ cd -
 cd symbols/taobao-fuse
   ./build.sh
 cd -
+
+cd symbols/taobao-led
+  ./build.sh
+cd -
+
+cd symbols/taobao-osc
+  ./build.sh
+cd -
