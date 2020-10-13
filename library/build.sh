@@ -14,6 +14,10 @@ cd symbols/taobao-l
   ./build.sh
 cd -
 
+cd symbols/taobao-d
+  ./build.sh
+cd -
+
 cd symbols/taobao-cp
   ./build.sh
 cd -
@@ -27,5 +31,9 @@ cd symbols/taobao-led
 cd -
 
 cd symbols/taobao-osc
+  ./build.sh
+cd -
+
+cd symbols/taobao-zd
   ./build.sh
 cd -

@@ -179,5 +179,7 @@ def main():
         getLibFile(raw_values)
         getDcmFile(raw_values)
 
+        print('generate diode done')
+
 if __name__ == '__main__':
     main()
