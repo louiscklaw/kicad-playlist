@@ -11,7 +11,7 @@ from string import Template
 import csv
 
 INPUT_TABLE='zd_value_list.csv'
-LIB_FILE_PATH='/home/logic/_workspace/kicad/kicad_library/kicad-symbols/taobao-zd.lib'
+LIB_FILE_PATH='taobao-zd.lib'
 DCM_FILE_PATH=LIB_FILE_PATH.replace('.lib','.dcm')
 
 
