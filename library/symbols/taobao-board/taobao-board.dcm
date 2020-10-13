@@ -1,0 +1,39 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BOARD_REVISION
+K BOARD_REVISION REVISION
+$ENDCMP
+#
+$CMP SIM800C_MODULE
+D SIM800C_MODULE
+K SIM800C_MODULE
+$ENDCMP
+#
+$CMP UBLOX-NEO-6M_DEBUG
+D UBLOX-NEO-6M
+K UBLOX DEBUG NEO-6M
+F https://buyertrade.taobao.com/trade/detail/tradeSnap.htm?spm=a1z09.2.0.0.3b7c2e8db3tGXC&tradeID=235533537498992767&snapShot=true
+$ENDCMP
+#
+$CMP bluepill-stm32f103c8t6
+D BLUEPILL STM32F103C8T6
+K BLUEPILL STM32F103C8T6 STM32
+$ENDCMP
+#
+$CMP friendlyarm_nano_pi_duo2
+D nano pi duo2 friendlyarm
+K nano pi duo2 friendlyarm
+F http://wiki.friendlyarm.com/wiki/index.php/NanoPi_Duo2
+$ENDCMP
+#
+$CMP lora_debug
+K lora
+F https://detail.tmall.com/item.htm?spm=a230r.1.14.6.5e09526a9EJQaf&id=581909209210&cm_id=140105335569ed55e27b&abbucket=4
+$ENDCMP
+#
+$CMP nodemcu_v1
+D nodemcu esp-12e
+K nodemcu esp-12e
+$ENDCMP
+#
+#End Doc Library

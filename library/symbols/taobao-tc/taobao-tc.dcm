@@ -1,0 +1,93 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TC105,6V
+D Polarized capacitor, small symbol
+K cap capacitor titanium_capacitor 鉭電容 https://item.taobao.com/item.htm?spm=a230r.1.14.27.6ab534a2b5lRvu&id=552767914164&ns=1&abbucket=19#detail
+F ~
+$ENDCMP
+#
+$CMP TC105,35V
+D Polarized capacitor, small symbol
+K cap capacitor titanium_capacitor 鉭電容 https://item.taobao.com/item.htm?spm=a230r.1.14.27.6ab534a2b5lRvu&id=552767914164&ns=1&abbucket=19#detail
+F ~
+$ENDCMP
+#
+$CMP TC225,16V
+D Polarized capacitor, small symbol
+K cap capacitor titanium_capacitor 鉭電容 https://item.taobao.com/item.htm?spm=a230r.1.14.27.6ab534a2b5lRvu&id=552767914164&ns=1&abbucket=19#detail
+F ~
+$ENDCMP
+#
+$CMP TC225,35V
+D Polarized capacitor, small symbol
+K cap capacitor titanium_capacitor 鉭電容 https://item.taobao.com/item.htm?spm=a230r.1.14.27.6ab534a2b5lRvu&id=552767914164&ns=1&abbucket=19#detail
+F ~
+$ENDCMP
+#
+$CMP TC475,16V
+D Polarized capacitor, small symbol
+K cap capacitor titanium_capacitor 鉭電容 https://item.taobao.com/item.htm?spm=a230r.1.14.27.6ab534a2b5lRvu&id=552767914164&ns=1&abbucket=19#detail
+F ~
+$ENDCMP
+#
+$CMP TC475,25V
+D Polarized capacitor, small symbol
+K cap capacitor titanium_capacitor 鉭電容 https://item.taobao.com/item.htm?spm=a230r.1.14.27.6ab534a2b5lRvu&id=552767914164&ns=1&abbucket=19#detail
+F ~
+$ENDCMP
+#
+$CMP TC106,10V
+D Polarized capacitor, small symbol
+K cap capacitor titanium_capacitor 鉭電容 https://item.taobao.com/item.htm?spm=a230r.1.14.27.6ab534a2b5lRvu&id=552767914164&ns=1&abbucket=19#detail
+F ~
+$ENDCMP
+#
+$CMP TC106,16V
+D Polarized capacitor, small symbol
+K cap capacitor titanium_capacitor 鉭電容 https://item.taobao.com/item.htm?spm=a230r.1.14.27.6ab534a2b5lRvu&id=552767914164&ns=1&abbucket=19#detail
+F ~
+$ENDCMP
+#
+$CMP TC226,10V
+D Polarized capacitor, small symbol
+K cap capacitor titanium_capacitor 鉭電容 https://item.taobao.com/item.htm?spm=a230r.1.14.27.6ab534a2b5lRvu&id=552767914164&ns=1&abbucket=19#detail
+F ~
+$ENDCMP
+#
+$CMP TC226,16V
+D Polarized capacitor, small symbol
+K cap capacitor titanium_capacitor 鉭電容 https://item.taobao.com/item.htm?spm=a230r.1.14.27.6ab534a2b5lRvu&id=552767914164&ns=1&abbucket=19#detail
+F ~
+$ENDCMP
+#
+$CMP TC476,6V
+D Polarized capacitor, small symbol
+K cap capacitor titanium_capacitor 鉭電容 https://item.taobao.com/item.htm?spm=a230r.1.14.27.6ab534a2b5lRvu&id=552767914164&ns=1&abbucket=19#detail
+F ~
+$ENDCMP
+#
+$CMP TC476,10V
+D Polarized capacitor, small symbol
+K cap capacitor titanium_capacitor 鉭電容 https://item.taobao.com/item.htm?spm=a230r.1.14.27.6ab534a2b5lRvu&id=552767914164&ns=1&abbucket=19#detail
+F ~
+$ENDCMP
+#
+$CMP TC107,6V
+D Polarized capacitor, small symbol
+K cap capacitor titanium_capacitor 鉭電容 https://item.taobao.com/item.htm?spm=a230r.1.14.27.6ab534a2b5lRvu&id=552767914164&ns=1&abbucket=19#detail
+F ~
+$ENDCMP
+#
+$CMP TC107,16V
+D Polarized capacitor, small symbol
+K cap capacitor titanium_capacitor 鉭電容 https://item.taobao.com/item.htm?spm=a230r.1.14.27.6ab534a2b5lRvu&id=552767914164&ns=1&abbucket=19#detail
+F ~
+$ENDCMP
+#
+$CMP TC227,6V
+D Polarized capacitor, small symbol
+K cap capacitor titanium_capacitor 鉭電容 https://item.taobao.com/item.htm?spm=a230r.1.14.27.6ab534a2b5lRvu&id=552767914164&ns=1&abbucket=19#detail
+F ~
+$ENDCMP
+#
+#End Doc Library

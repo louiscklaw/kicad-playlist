@@ -1,0 +1,471 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 10D-11
+D Temperature dependent resistor, negative temperature coefficient
+K thermistor NTC resistor sensor RTD
+F ~
+$ENDCMP
+#
+$CMP AN9520
+D AN9520
+K AN9520
+F https://item.taobao.com/item.htm?spm=a1z09.2.0.0.71212e8dAGB02j&id=558697929868&_u=7ot8j1n38fe
+$ENDCMP
+#
+$CMP ATMEGA328P-TQFP
+D ATMEGA328 ARDUINO
+K ATMEGA328 ARDUINO
+$ENDCMP
+#
+$CMP ATTINY85
+D ATTINY85
+K ATTINY85
+$ENDCMP
+#
+$CMP AVDD
+D AVDD
+K AVDD
+$ENDCMP
+#
+$CMP BCT4157
+D BCT4157
+K BCT4157
+$ENDCMP
+#
+$CMP BMP180
+D BMP180
+K BMP180
+$ENDCMP
+#
+$CMP CH340C
+K CH340C
+$ENDCMP
+#
+$CMP CH340H
+D CH340H
+K CH340H
+$ENDCMP
+#
+$CMP CH340T
+D CH340T
+K CH340T_SSOP-20
+$ENDCMP
+#
+$CMP CR2302_BATTERY
+D CR2302_BATTERY
+K CR2302 CR2302_BATTERY
+$ENDCMP
+#
+$CMP CSI-AVDD
+K CSI-AVDD
+$ENDCMP
+#
+$CMP Conn_RPi_02_20
+K raspberry rpi
+$ENDCMP
+#
+$CMP DHT-11
+D Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
+$CMP DS1307_SOIC8
+D DS1307_SOIC8
+K DS1307
+$ENDCMP
+#
+$CMP EC11_VERTICAL
+D Rotary encoder, dual channel, incremental quadrate outputs, with switch
+K EC11 rotatry switch
+F https://item.taobao.com/item.htm?spm=a1z09.2.0.0.61152e8dxnonTp&id=532637189592&_u=rot8j1n8a4b
+$ENDCMP
+#
+$CMP EL817S1
+D DC Optocoupler, Vce 35V, CTR 50%, DIP-4
+K NPN DC Optocoupler
+F http://www.us.liteon.com/downloads/LTV-817-827-847.PDF
+$ENDCMP
+#
+$CMP ESP-07
+D ESP-07
+K ESP-07 ESP
+$ENDCMP
+#
+$CMP ESP-12F
+D ESP-12F
+K ESP-12F
+$ENDCMP
+#
+$CMP ESP-32S
+D ESP-32S
+K ESP-32S
+$ENDCMP
+#
+$CMP ESP-WROOM-32NARROW
+K esp32 ESP-WROOM-32 ESP-WROOM
+$ENDCMP
+#
+$CMP ESP8266EX
+K ESP8266EX ESP8266
+$ENDCMP
+#
+$CMP ESP8266EX_SERVICE
+D ESP8266 SERVICE DEBUG HEADER
+K ESP8266 SERVICE DEBUG HEADER
+$ENDCMP
+#
+$CMP FE1.1_LQFP48
+D FE1.1 usb hubs
+K FE1.1 usb hubs
+F https://www.snapeda.com/parts/FE1.1/Terminus-Tech/datasheet/
+$ENDCMP
+#
+$CMP FUSE_250V
+D 382圆形保险管 250V 慢断
+$ENDCMP
+#
+$CMP HE05P15LRN
+D HE05P15LRN
+K HIECUBE
+$ENDCMP
+#
+$CMP HE06P15LRN
+D HE06P15LRN
+K HIECUBE
+$ENDCMP
+#
+$CMP HE09P24LRN
+D HE09P24LRN
+K HIECUBE
+$ENDCMP
+#
+$CMP HE12P24LRN
+D HE12P24LRN
+K HIECUBE
+$ENDCMP
+#
+$CMP HE15P24LRN
+D HE15P24LRN
+K HIECUBE
+$ENDCMP
+#
+$CMP HE20P24LRN
+D HE20P24LRN
+K HIECUBE
+$ENDCMP
+#
+$CMP HE24P24LRN
+D HE24P24LRN
+K HIECUBE
+$ENDCMP
+#
+$CMP HE28P24LRN
+D HE28P24LRN
+K HIECUBE
+$ENDCMP
+#
+$CMP HE36P24LRN
+D HE36P24LRN
+K HIECUBE
+$ENDCMP
+#
+$CMP HLK-5M03
+D HLK-PMxx
+K HLK-PMxx HILINK
+$ENDCMP
+#
+$CMP HLK-5M05
+D HLK-PMxx
+K HLK-PMxx HILINK
+$ENDCMP
+#
+$CMP HLK-5M12
+D HLK-PMxx
+K HLK-PMxx HILINK
+$ENDCMP
+#
+$CMP HLK-PM01
+D HLK-PMxx
+K HLK-PMxx HILINK
+$ENDCMP
+#
+$CMP HLK-PM03
+D HLK-PMxx
+K HLK-PMxx HILINK
+$ENDCMP
+#
+$CMP HLK-PM12
+D HLK-PMxx
+K HLK-PMxx HILINK
+$ENDCMP
+#
+$CMP HLK-PM24
+D HLK-PMxx
+K HLK-PMxx HILINK
+$ENDCMP
+#
+$CMP HLK-PMxx
+D HLK-PMxx
+K HLK-PMxx HILINK
+$ENDCMP
+#
+$CMP HRS1H-S-DC5V
+D HRS1H-S-DC5V
+K HRS1H-S-DC5V
+$ENDCMP
+#
+$CMP I2C_DEBUG
+D I2C DEBUG
+K I2C DEBUG
+$ENDCMP
+#
+$CMP I2C_HEADER
+D I2C DEBUG
+K I2C DEBUG
+$ENDCMP
+#
+$CMP I2C_HEADER,1.27
+D I2C DEBUG
+K I2C DEBUG
+$ENDCMP
+#
+$CMP I2C_HEADER,2.54
+D I2C DEBUG
+K I2C DEBUG
+$ENDCMP
+#
+$CMP IPEX
+F https://www.digikey.com/product-detail/en/samtec-inc/RSP-122811-02/SAM9852-ND/6678589?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol
+$ENDCMP
+#
+$CMP LED_dual_small
+D Light emitting diode, small symbol
+K led dual small
+F ~
+$ENDCMP
+#
+$CMP LM2940CT-5
+K LM2940CT-5
+$ENDCMP
+#
+$CMP MCP73833_DFN
+D MCP73833_DFN
+K MCP73833_DFN
+$ENDCMP
+#
+$CMP MCP73833_MSOP10
+D MCP73833_MSOP10
+K MCP73833_MSOP10
+$ENDCMP
+#
+$CMP MCP73837_MSOP10
+D MCP73837_MSOP10
+K MCP73837_MSOP10
+$ENDCMP
+#
+$CMP MIC2026
+K MIC2026
+$ENDCMP
+#
+$CMP ML8511
+D ML8511
+K ML8511
+$ENDCMP
+#
+$CMP MPU-6050-1
+D MPU-6050
+K MPU-6050
+$ENDCMP
+#
+$CMP MPU-6050-QFN24
+D MPU-6050
+K MPU-6050
+$ENDCMP
+#
+$CMP NEO-6M
+D UBLOX U-BLOX NEO-6M
+K UBLOX U-BLOX NEO-6M
+F https://www.u-blox.com/sites/default/files/products/documents/NEO-6_DataSheet_%28GPS.G6-HW-09005%29.pdf
+$ENDCMP
+#
+$CMP OV2640_FPC
+D OV2640_FPC
+K OV2640_FPC OV2640
+$ENDCMP
+#
+$CMP OV2643_FPC
+D OV2643_FPC
+K OV2643_FPC OV2643
+$ENDCMP
+#
+$CMP OV965X_FPC
+D OV965X_FPC
+K OV965X_FPC OV965X
+$ENDCMP
+#
+$CMP O_EPSON_32.768K
+D O_EPSON_32.768K
+K O_EPSON_32.768K 32.768 OSC 32K
+F https://support.epson.biz/td/api/doc_check.php?dl=brief_MC-306&lang=en
+$ENDCMP
+#
+$CMP RFM95
+K RFM95
+$ENDCMP
+#
+$CMP SDCARD_HEADER
+D SDCARD HEADER
+K SDCARD HEADER
+$ENDCMP
+#
+$CMP SDCARD_HEADER_10PIN
+D Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)
+K SDCARD_HEADER_10PIN SDCCARD HEADER
+F ~
+$ENDCMP
+#
+$CMP SDWF-23BS
+K RTL8723BS
+$ENDCMP
+#
+$CMP SHT20
+D SHT20
+K SHT20
+F https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/0_Datasheets/Humidity/Sensirion_Humidity_Sensors_SHT20_Datasheet.pdf
+$ENDCMP
+#
+$CMP SPI_DEBUG
+D SPI DEBUG HEADER
+K SPI DEBUG HEADER
+$ENDCMP
+#
+$CMP SPI_HEADER
+D SPI DEBUG HEADER
+K SPI DEBUG HEADER
+$ENDCMP
+#
+$CMP SRD-05VDC-SL-C
+D SRD-05VDC-SL-C
+K SRD-05VDC-SL-C
+$ENDCMP
+#
+$CMP STM32F030F4_TSSOP20
+D STM32F030F4
+K STM32F030F4
+F https://www.st.com/resource/en/datasheet/stm32f042c6.pdf
+$ENDCMP
+#
+$CMP STM32F042FxPx_TSSOP20
+D STM32F042FxPx_TSSOP20
+K STM32F042FxPx TSSOP20
+F https://www.st.com/resource/en/datasheet/stm32f042c6.pdf
+$ENDCMP
+#
+$CMP STM32F103C8T6
+D STM32F103C8T6
+K STM32F103C8T6
+$ENDCMP
+#
+$CMP STM32F103C8T6_rect
+D STM32F103C8T6
+K STM32F103C8T6
+$ENDCMP
+#
+$CMP SX1508
+K SX1509
+$ENDCMP
+#
+$CMP SX1509
+K SX1509
+$ENDCMP
+#
+$CMP SolderJumper_3_Open
+D Solder Jumper, 3-pole, open
+K Solder Jumper SPDT
+F ~
+$ENDCMP
+#
+$CMP TF_CARD_SOCKET,SELF_EJECT
+K TF_CARD_SOCKET SELF_EJECT SUNTECH_ST-TF-003A
+F https://item.taobao.com/item.htm?spm=a1z09.2.0.0.7a6a2e8dHbVc89&id=522573245737&_u=jot8j1n3ccf
+$ENDCMP
+#
+$CMP TPS54335-2A
+D TPS54335-2A
+K TPS54335-2A
+$ENDCMP
+#
+$CMP TPS54340
+D TPS54340
+K TPS54340
+F http://www.ti.com/lit/ds/symlink/tps54340.pdf
+$ENDCMP
+#
+$CMP TTL_DEBUG
+D TTL DEBUG HEADER
+K TTL DEBUG HEADER
+$ENDCMP
+#
+$CMP TTL_HEADER
+D SPI DEBUG HEADER
+K SPI DEBUG HEADER
+$ENDCMP
+#
+$CMP Thermistor_NTC,0805
+D Temperature dependent resistor, negative temperature coefficient
+K thermistor NTC resistor sensor RTD
+F ~
+$ENDCMP
+#
+$CMP USBLC6-2SC6_SOT23-6
+D USBLC6-2 TVS USB
+K USBLC6-2 USB TVS
+$ENDCMP
+#
+$CMP USB_DEBUG
+D SPI DEBUG HEADER
+K SPI DEBUG HEADER
+$ENDCMP
+#
+$CMP USB_HEADER
+D USB DEBUG HEADER
+K USB DEBUG HEADER
+$ENDCMP
+#
+$CMP USB_Micro
+D USB_Micro
+K USB_Micro
+$ENDCMP
+#
+$CMP VEML6070
+D VEML6070
+K VEML6070
+$ENDCMP
+#
+$CMP Va
+D Power symbol creates a global label with name "+1V0"
+K power-flag
+$ENDCMP
+#
+$CMP Vb
+D Power symbol creates a global label with name "+1V0"
+K power-flag
+$ENDCMP
+#
+$CMP Vc
+D Power symbol creates a global label with name "+1V0"
+K power-flag
+$ENDCMP
+#
+$CMP W25Q32JVSSIQ
+K W25Q32JVSSIQ
+F https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwi02JP0prjiAhXaBIgKHRI3AjoQFjAAegQIABAC&url=https%3A%2F%2Fwww.winbond.com%2Fresource-files%2Fw25q32jv%2520spi%2520revc%252008302016.pdf&usg=AOvVaw224j1hLYjMOvdAbYlB56Mn
+$ENDCMP
+#
+$CMP orange_pi_zero
+D orange_pi_zero
+K orange_pi_zero
+$ENDCMP
+#
+#End Doc Library

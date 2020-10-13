@@ -1,0 +1,111 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP C200
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C200 
+F ~
+$ENDCMP
+#
+$CMP C220
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C220 
+F ~
+$ENDCMP
+#
+$CMP C330
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C330 
+F ~
+$ENDCMP
+#
+$CMP C101
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C101 
+F ~
+$ENDCMP
+#
+$CMP C221
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C221 
+F ~
+$ENDCMP
+#
+$CMP C331
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C331 
+F ~
+$ENDCMP
+#
+$CMP C471
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C471 
+F ~
+$ENDCMP
+#
+$CMP C102
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C102 
+F ~
+$ENDCMP
+#
+$CMP C222
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C222 
+F ~
+$ENDCMP
+#
+$CMP C103
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C103 
+F ~
+$ENDCMP
+#
+$CMP C223
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C223 
+F ~
+$ENDCMP
+#
+$CMP C333
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C333 
+F ~
+$ENDCMP
+#
+$CMP C473
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C473 
+F ~
+$ENDCMP
+#
+$CMP C104
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C104 
+F ~
+$ENDCMP
+#
+$CMP C224
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C224 
+F ~
+$ENDCMP
+#
+$CMP C334
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C334 
+F ~
+$ENDCMP
+#
+$CMP C474
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C474 
+F ~
+$ENDCMP
+#
+$CMP C105
+D Unpolarized capacitor, small symbol, 
+K capacitor cap C105 
+F ~
+$ENDCMP
+#
+#End Doc Library
