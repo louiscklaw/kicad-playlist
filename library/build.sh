@@ -13,3 +13,7 @@ cd -
 cd symbols/taobao-l
   ./build.sh
 cd -
+
+cd symbols/taobao-cp
+  ./build.sh
+cd -
