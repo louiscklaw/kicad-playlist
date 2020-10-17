@@ -34,7 +34,7 @@ jobs:
           github-build-merger/test.sh
 
   merge:
-    needs: [publish-orphan-tryout, react-calendar-heatmap-tryout, react-chrono-tryout-working, react-heatmap-grid-tryout, react-helloworld-tryout, test_merger]
+    needs: [test_merger]
     runs-on: ubuntu-latest
     steps:
       - name: checkout
