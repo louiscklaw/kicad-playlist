@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP VAR_5V6
+D Resistor
+K R r res resistor VAR_5V6 VAR_5V6
+F ~
+$ENDCMP
+#
+#End Doc Library
