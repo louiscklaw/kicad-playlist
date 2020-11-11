@@ -1,0 +1,23 @@
+name: master_build
+on:
+  push:
+
+jobs:
+
+  build_kicad_library:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: run test
+        env: # Or as an environment variable
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+
+        run: |
+          pushd library/symbols
+              sh ./build.sh
+          popd
+          pushd library/footprint
+              echo 'helloworld footprint build'
+          popd

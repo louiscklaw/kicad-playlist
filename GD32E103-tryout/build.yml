@@ -1,8 +1,9 @@
-pcbops-tryout:
+GD32E103-tryout:
   runs-on: ubuntu-latest
   steps:
     - uses: actions/checkout@v2
+
     - run: |
-        pushd pcbops-tryout
+        pushd GD32E103-tryout
           ./build.sh
         popd
