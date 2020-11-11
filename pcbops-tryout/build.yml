@@ -5,4 +5,4 @@ pcbops-tryout:
 
     - run: |
         cd pcbops-tryout
-          build.sh
+          ./build.sh
