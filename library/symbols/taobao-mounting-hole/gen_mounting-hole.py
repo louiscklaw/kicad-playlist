@@ -11,7 +11,7 @@ from string import Template
 import csv
 
 FILE_VALUE_LIST='mounting_value_list.csv'
-LIB_FILE_PATH='/home/logic/_workspace/kicad/kicad_library/kicad-symbols/taobao-mounting-hole.lib'
+LIB_FILE_PATH='taobao-mounting-hole.lib'
 DCM_FILE_PATH=LIB_FILE_PATH.replace('.lib','.dcm')
 
 C_LIB_TEMPLATE=Template("""EESchema-LIBRARY Version 2.4
