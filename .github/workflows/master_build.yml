@@ -42,14 +42,12 @@ jobs:
           MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
 
         run: |
-          cd library
-            cd symbols
+          pushd library/symbols
               sh ./build.sh
-            cd ..
-
-            cd footprint
+          popd
+          pushd library/footprint
               echo 'helloworld footprint build'
-            cd ..
+          popd
 
 
   merge:
