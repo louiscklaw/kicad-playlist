@@ -3,13 +3,30 @@ on:
   push:
 
 jobs:
+
+
   #
-  # /home/logic/_workspace/react-playlist/github-build-merger/subjob.yml
+  # /home/logic/_workspace/kicad-playlist/pcbops-tryout/build.yml
+  #
+  pcbops-tryout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: |
+          cd pcbops-tryout
+            ./build.sh
+
+
+  #
+  # /home/logic/_workspace/kicad-playlist/github-build-merger/subjob.yml
   #
   test_merger:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: checkout
+        uses: actions/checkout@v2
+
       - name: run test
         env: # Or as an environment variable
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
@@ -51,7 +68,7 @@ jobs:
 
 
   merge:
-    needs: [test_merger, build_kicad_library]
+    needs: [pcbops-tryout, test_merger]
     runs-on: ubuntu-latest
     steps:
       - name: checkout
