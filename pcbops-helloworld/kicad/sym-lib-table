@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name example)(type Legacy)(uri ,,./lib/example.lib)(options "")(descr ""))
-)
