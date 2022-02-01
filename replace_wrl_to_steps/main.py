@@ -3,7 +3,7 @@ import pprint
 import subprocess, shlex
 
 
-for root, dirs, files in os.walk(r"c:\temp", topdown=False):
+for root, dirs, files in os.walk(r"C:\Program Files\KiCad\6.0\share\kicad\footprints", topdown=False):
    for name in files:
       if name.find('kicad_mod') > 0:
         print(os.path.join(root, name))
