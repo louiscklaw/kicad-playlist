@@ -1,6 +1,6 @@
 (footprint "RJ45_NETWORK_SOCKET_1CH_1_VERTICAL" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
-  (tedit 61FBDD32)
+  (tedit 61FBDD62)
   (descr "带灯 RJ45 5224 带灯立式 RJ45插座 母座 网络插座 5224-8P8C带灯")
   (tags "RJ45 ")
   (attr through_hole)
@@ -39,8 +39,8 @@
     (rotate (xyz -90 0 -90))
   )
   (model "${MY_LIBRARY_DIR}/kicad-packages3d/RJ45/RJ45 SH Plug.STEP"
-    (offset (xyz 0 3 6.5))
+    (offset (xyz 0 6.5 11.5))
     (scale (xyz 1 1 1))
-    (rotate (xyz -90 0 0))
+    (rotate (xyz -180 0 0))
   )
 )
