@@ -1,7 +1,7 @@
 (footprint "RJ45_NETWORK_SOCKET_4CH" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
-  (tedit 61FB9362)
-  (descr "RJ45 插座網口 8P8C 帶燈帶屏蔽 銅殼短款")
+  (tedit 61FB94B3)
+  (descr "https://item.taobao.com/item.htm?id=4437096758&ali_refid=a3_430620_1006:1103069084:N:yJHSC38I4EWh95ECT6u41r%2Fpizj82Htz:52e135e0ff6fdbb295406ab7a76cdc21&ali_trackid=1_52e135e0ff6fdbb295406ab7a76cdc21&spm=a230r.1.14.3#detail")
   (tags "RJ45 ")
   (attr through_hole)
   (fp_text reference "REF**" (at 0 -4 unlocked) (layer "F.SilkS")
@@ -77,8 +77,8 @@
   (pad "9" thru_hole circle (at 7.875 -10.15) (size 3 3) (drill 1.8) (layers *.Cu *.Mask) (tstamp ec48f40d-c3a1-41ac-85d7-ccfcf1117463))
   (pad "G" thru_hole circle (at 31.75 -3.56) (size 4 4) (drill 2) (layers *.Cu *.Mask) (tstamp 7f669845-0326-48df-a6dc-f3682191298e))
   (pad "G" thru_hole circle (at -31.75 -3.56) (size 4 4) (drill 2) (layers *.Cu *.Mask) (tstamp c00674b6-f006-4fbf-9ccc-817afc5784ab))
-  (model "${MY_LIBRARY_DIR}/kicad-packages3d/RJ45/RJ45 Modular Jack - AMP 1-406541-1.stp"
-    (offset (xyz 0 0 6.5))
+  (model "C:/Users/logic/_workspace/kicad-playlist/library/footprint/my_connector_lib.pretty/ss-74800-006.stp"
+    (offset (xyz 0 15.5 -0.5))
     (scale (xyz 1 1 1))
     (rotate (xyz -90 0 180))
   )
@@ -86,5 +86,10 @@
     (offset (xyz 0 3 6.5))
     (scale (xyz 1 1 1))
     (rotate (xyz -90 0 0))
+  )
+  (model "${MY_LIBRARY_DIR}/kicad-packages3d/RJ45/RJ45 SH Plug.STEP"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))
   )
 )
