@@ -1,3 +1,7 @@
+### RJ45_NETWORK_SOCKET_1CH_1_VERTICAL
+
+https://item.taobao.com/item.htm?spm=a312a.7700824.w4002-6949907793.27.456e639aoaEYer&id=38733723822
+
 ### RJ45_NETWORK_SOCKET_1CH_LED
 
 https://item.taobao.com/item.htm?spm=a312a.7700824.w4002-6949907793.15.161d639algFzp5&id=37849964392
