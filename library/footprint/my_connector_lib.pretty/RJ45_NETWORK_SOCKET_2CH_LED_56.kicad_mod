@@ -1,6 +1,6 @@
 (footprint "RJ45_NETWORK_SOCKET_2CH_LED_56" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
-  (tedit 61FBB041)
+  (tedit 61FBB144)
   (descr "RJ45 插座網口 8P8C 帶燈帶屏蔽 銅殼短款")
   (tags "RJ45 ")
   (attr through_hole)
@@ -55,14 +55,19 @@
   (pad "2.12" thru_hole circle (at 14.76 -9.13) (size 1.8 1.8) (drill 1) (layers *.Cu *.Mask) (tstamp 18cf3d0e-decb-4baa-bbca-50180b40811e))
   (pad "G" thru_hole circle (at 16 -3.56) (size 3 3) (drill 1.8) (layers *.Cu *.Mask) (tstamp 7f669845-0326-48df-a6dc-f3682191298e))
   (pad "G" thru_hole circle (at -16 -3.56) (size 3 3) (drill 1.8) (layers *.Cu *.Mask) (tstamp c00674b6-f006-4fbf-9ccc-817afc5784ab))
-  (model "${MY_LIBRARY_DIR}/kicad-packages3d/RJ45/RJ45 Modular Jack - AMP 1-406541-1.stp"
-    (offset (xyz 0 -3 6))
+  (model "C:/Users/logic/_workspace/kicad-playlist/library/footprint/my_connector_lib.pretty/RJ45_NETWORK_SOCKET_2CH_LED_56.stp"
+    (offset (xyz 0 3 6))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 0))
+  )
+  (model "${MY_LIBRARY_DIR}/kicad-packages3d/RJ45/RJ45 SH Plug.STEP"
+    (offset (xyz -8 0 6.5))
     (scale (xyz 1 1 1))
     (rotate (xyz -90 0 180))
   )
   (model "${MY_LIBRARY_DIR}/kicad-packages3d/RJ45/RJ45 SH Plug.STEP"
-    (offset (xyz 0 3 6.5))
+    (offset (xyz 8 0 6))
     (scale (xyz 1 1 1))
-    (rotate (xyz -90 0 0))
+    (rotate (xyz -90 0 180))
   )
 )
