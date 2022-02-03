@@ -1,3 +1,8 @@
+### RJ45_NETWORK_SOCKET_1CH_1_SINK
+
+- RJ45 母座 8P8C 接口 沉板 8.6mmSMT 贴片 全包屏蔽铜外壳 笔记本网口
+- https://item.taobao.com/item.htm?id=595434891810&ali_refid=a3_430008_1006:1105251843:N:kN%2BFrBZQbxZTJylcEQmZaQ%3D%3D:bf5f94c5f25773cd698b0d8ba3dbc31f&ali_trackid=1_bf5f94c5f25773cd698b0d8ba3dbc31f&spm=a230r.1.0.0
+
 ### RJ45_NETWORK_SOCKET_1CH_1_VERTICAL
 
 https://item.taobao.com/item.htm?spm=a312a.7700824.w4002-6949907793.27.456e639aoaEYer&id=38733723822
