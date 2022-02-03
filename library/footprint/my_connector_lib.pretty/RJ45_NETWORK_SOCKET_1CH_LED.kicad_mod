@@ -1,6 +1,6 @@
 (footprint "RJ45_NETWORK_SOCKET_1CH_LED" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
-  (tedit 61FBB767)
+  (tedit 61FBB7BC)
   (descr "RJ45 插座網口 8P8C 帶燈帶屏蔽 銅殼短款")
   (tags "RJ45 ")
   (attr through_hole)
@@ -35,8 +35,8 @@
   (pad "1.10" thru_hole circle (at -4.57 -9.144) (size 1.8 1.8) (drill 1) (layers *.Cu *.Mask) (tstamp 3e35ec55-6e98-4581-9a29-9732a6489518))
   (pad "1.11" thru_hole circle (at 4.57 -9.13) (size 1.8 1.8) (drill 1) (layers *.Cu *.Mask) (tstamp 17b65212-5089-4b10-8076-6ae933d78b8b))
   (pad "1.12" thru_hole circle (at 6.86 -9.13) (size 1.8 1.8) (drill 1) (layers *.Cu *.Mask) (tstamp 2e20faf4-7401-46d5-ae6b-fc5bbb32f6ff))
-  (pad "G" thru_hole oval (at 8.13 -3.56) (size 3 4) (drill 1.8) (layers *.Cu *.Mask) (tstamp 7f669845-0326-48df-a6dc-f3682191298e))
-  (pad "G" thru_hole oval (at -8.13 -3.56) (size 3 4) (drill 1.8) (layers *.Cu *.Mask) (tstamp c00674b6-f006-4fbf-9ccc-817afc5784ab))
+  (pad "G" thru_hole oval (at 8.13 -3.56) (size 4 4) (drill 1.8) (layers *.Cu *.Mask) (tstamp 7f669845-0326-48df-a6dc-f3682191298e))
+  (pad "G" thru_hole oval (at -8.13 -3.56) (size 4 4) (drill 1.8) (layers *.Cu *.Mask) (tstamp c00674b6-f006-4fbf-9ccc-817afc5784ab))
   (model "C:/Users/logic/_workspace/kicad-playlist/library/footprint/my_connector_lib.pretty/RJ45_NETWORK_SOCKET_1CH_LED.stp"
     (offset (xyz 0 2.5 6))
     (scale (xyz 1 1 1))
