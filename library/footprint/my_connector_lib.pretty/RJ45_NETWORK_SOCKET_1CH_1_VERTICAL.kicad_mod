@@ -1,6 +1,6 @@
 (footprint "RJ45_NETWORK_SOCKET_1CH_1_VERTICAL" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
-  (tedit 61FBDCCB)
+  (tedit 61FBDCE3)
   (descr "带灯 RJ45 5224 带灯立式 RJ45插座 母座 网络插座 5224-8P8C带灯")
   (tags "RJ45 ")
   (attr through_hole)
