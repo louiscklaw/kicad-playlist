@@ -1,6 +1,6 @@
 (footprint "RJ45_NETWORK_SOCKET_1CH" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
-  (tedit 61FB837C)
+  (tedit 61FB85E0)
   (descr "RJ45 插座網口 8P8C 帶燈帶屏蔽 銅殼短款")
   (tags "RJ45 ")
   (attr through_hole)
@@ -36,5 +36,10 @@
     (offset (xyz 0 0 6.5))
     (scale (xyz 1 1 1))
     (rotate (xyz -90 0 180))
+  )
+  (model "${MY_LIBRARY_DIR}/kicad-packages3d/RJ45/RJ45 SH Plug.STEP"
+    (offset (xyz 0 3 6.5))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 0))
   )
 )
