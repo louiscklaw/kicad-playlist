@@ -103,7 +103,7 @@
   (symbol (lib_id "Mechanical:Fiducial") (at 31.75 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 4e867f97-33c8-40b0-af28-0364779efab7)
-    (property "Reference" "FID?" (id 0) (at 34.29 111.7599 0)
+    (property "Reference" "FID4" (id 0) (at 34.29 111.7599 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Fiducial" (id 1) (at 34.29 114.2999 0)
@@ -137,7 +137,7 @@
   (symbol (lib_id "Mechanical:Fiducial") (at 31.75 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid b8b0cefe-4db0-4dd6-b26b-e227cbb24e7d)
-    (property "Reference" "FID?" (id 0) (at 34.29 118.1099 0)
+    (property "Reference" "FID5" (id 0) (at 34.29 118.1099 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Fiducial" (id 1) (at 34.29 120.6499 0)
@@ -154,7 +154,7 @@
   (symbol (lib_id "Mechanical:Fiducial") (at 31.75 125.73 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid c5dc3d9d-6ef1-42e1-836d-66cbce4896de)
-    (property "Reference" "FID?" (id 0) (at 34.29 124.4599 0)
+    (property "Reference" "FID6" (id 0) (at 34.29 124.4599 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Fiducial" (id 1) (at 34.29 126.9999 0)
@@ -251,13 +251,13 @@
       (reference "FID3") (unit 1) (value "Fiducial") (footprint "Fiducial:Fiducial_1mm_Mask3mm")
     )
     (path "/4e867f97-33c8-40b0-af28-0364779efab7"
-      (reference "FID?") (unit 1) (value "Fiducial") (footprint "Fiducial:Fiducial_1mm_Mask3mm")
+      (reference "FID4") (unit 1) (value "Fiducial") (footprint "Fiducial:Fiducial_1mm_Mask3mm")
     )
     (path "/b8b0cefe-4db0-4dd6-b26b-e227cbb24e7d"
-      (reference "FID?") (unit 1) (value "Fiducial") (footprint "Fiducial:Fiducial_1mm_Mask3mm")
+      (reference "FID5") (unit 1) (value "Fiducial") (footprint "Fiducial:Fiducial_1mm_Mask3mm")
     )
     (path "/c5dc3d9d-6ef1-42e1-836d-66cbce4896de"
-      (reference "FID?") (unit 1) (value "Fiducial") (footprint "Fiducial:Fiducial_1mm_Mask3mm")
+      (reference "FID6") (unit 1) (value "Fiducial") (footprint "Fiducial:Fiducial_1mm_Mask3mm")
     )
     (path "/4ac39e6e-a6ad-43fd-a8a9-7dcc022ec2a8"
       (reference "H1") (unit 1) (value "MountingHole") (footprint "footprint-lib:MountingHole_3.1mm_M3,rpi_like")
