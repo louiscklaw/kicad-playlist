@@ -1,14 +1,11 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "/home/logic/_workspace/github-playlist"
-		},
-		{
-			"path": "../../travis-playlist"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../../_TODO/JLC2KiCad_lib"
+    }
+  ],
+  "settings": {}
 }
